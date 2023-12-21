@@ -19,7 +19,9 @@ app.get('/users',(req,res)=>{
 });
 
 app.post('/createuser',(req,res)=>{
+    controller.addUser(req,res,(callback)=>{
 
+    });
 });
 
 app.put('/updateuser',(req,res)=>{
