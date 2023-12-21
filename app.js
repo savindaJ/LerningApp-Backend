@@ -25,7 +25,9 @@ app.post('/createuser',(req,res)=>{
 });
 
 app.put('/updateuser',(req,res)=>{
+    controller.updateUser(req,res,(callback)=>{
 
+    });
 });
 
 app.delete('/deleteuser',(req,res)=>{
