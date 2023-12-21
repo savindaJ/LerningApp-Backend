@@ -15,3 +15,8 @@ const updateUser = (req,res)=>{
 const deleteUser = (req,res)=>{
     console.log("delete !");
 }
+
+exports.getAllUser = getAllUser;
+exports.addUser = addUser;
+exports.updateUser = updateUser;
+exports.deleteUser = deleteUser;
