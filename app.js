@@ -11,4 +11,20 @@ app.use(
 
 app.use(express.json());
 
+app.get('/users',(req,res)=>{
+
+});
+
+app.post('/createuser',(req,res)=>{
+
+});
+
+app.put('/updateuser',(req,res)=>{
+
+});
+
+app.delete('/deleteuser',(req,res)=>{
+
+});
+
 module.exports = app;
