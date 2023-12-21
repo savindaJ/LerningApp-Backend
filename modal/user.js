@@ -1,4 +1,3 @@
-
 function updateUser(req, res) {
     const UpdateId = req.body.id;
     const UpdateName = req.body.name;
@@ -34,5 +33,17 @@ function insertUser(req,res){
 
 }
 
+function deleteUser(req,res){
+    const id = req.body.id;
+    const insert = "DELETE FROM user WHERE user_id=?";
+
+    connection.query(insert, id, function (err, result) {
+        if (err) res.json(err.code);
+        console.log("Number of records inserted !: " + result.affectedRows);
+        return res.json({state:'200'});
+    });
+}
+
 module.exports.insertUser = insertUser;
 module.exports.updateUser = updateUser;
+module.exports.deleteUser = deleteUser;

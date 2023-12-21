@@ -17,7 +17,7 @@ const updateUser = (req,res)=>{
 
 const deleteUser = (req,res)=>{
     console.log("delete !");
-    res.json({massage:"delete user"})
+    modal.deleteUser(req,res);
 }
 
 exports.getAllUser = getAllUser;
