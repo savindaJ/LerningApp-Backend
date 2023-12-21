@@ -9,6 +9,9 @@ const addUser = (req,res)=>{
 }
 
 const updateUser = (req,res)=>{
-    console.log("put !";)
+    console.log("put !");
 }
 
+const deleteUser = (req,res)=>{
+    console.log("delete !");
+}
