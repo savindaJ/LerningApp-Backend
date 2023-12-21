@@ -1,4 +1,4 @@
-const connection = require('../db/connection')
+const modal = require('../modal/user');
 
 const getAllUser = (req,res)=>{
     console.log("get !");
