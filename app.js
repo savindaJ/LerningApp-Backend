@@ -31,7 +31,9 @@ app.put('/updateuser',(req,res)=>{
 });
 
 app.delete('/deleteuser',(req,res)=>{
+    controller.deleteUser(req,res,(callback)=>{
 
+    });
 });
 
 module.exports = app;
