@@ -7,12 +7,12 @@ const getAllUser = (req,res)=>{
 
 const addUser = (req,res)=>{
     console.log("post !");
-    res.json({massage:"insert user"})
+    modal.insertUser(req,res);
 }
 
 const updateUser = (req,res)=>{
     console.log("put !");
-    res.json({massage:"update user"})
+    modal.updateUser(req,res);
 }
 
 const deleteUser = (req,res)=>{
