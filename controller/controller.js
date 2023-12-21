@@ -2,7 +2,7 @@ const modal = require('../modal/user');
 
 const getAllUser = (req,res)=>{
     console.log("get !");
-    res.json({massage:"getAll"})
+    modal.getAllUser(req,res)
 }
 
 const addUser = (req,res)=>{

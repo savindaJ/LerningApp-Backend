@@ -44,6 +44,16 @@ function deleteUser(req,res){
     });
 }
 
+function getAllUser(req,res){
+    const insert = "SELECT*FROM user";
+
+    connection.query(insert, function (err, result) {
+        if (err) res.json(err.code);
+        return res.json(result);
+    });
+}
+
+module.exports.getAllUser = getAllUser;
 module.exports.insertUser = insertUser;
 module.exports.updateUser = updateUser;
 module.exports.deleteUser = deleteUser;
