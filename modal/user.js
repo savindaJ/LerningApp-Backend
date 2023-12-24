@@ -16,6 +16,7 @@ function updateUser(req, res) {
 
 const connection = require('../db/connection')
 function insertUser(req,res){
+    console.log(req.body)
     const id = req.body.id;
     const name = req.body.name;
 
@@ -35,7 +36,10 @@ function insertUser(req,res){
 
 function deleteUser(req,res){
 
-    if (req.body.id === undefined) {
+    console.log(req.body);
+    return res.json({state:'200'});
+
+    /*if (req.body.id === undefined) {
         console.log(req.body.id)
         res.status(404).json({ ERROR : 'Not Found' });
         return;
@@ -47,7 +51,7 @@ function deleteUser(req,res){
     connection.query(insert, id, function (err, result) {
         if (err) res.json(err.code);
         return res.json({state:'200'});
-    });
+    });*/
 }
 
 function getAllUser(req,res){
