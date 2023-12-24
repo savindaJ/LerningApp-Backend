@@ -25,11 +25,16 @@ function insertUser(req,res){
         const insert = "INSERT INTO user VALUES (?,?)";
 
         connection.query(insert, values, function (err, result) {
-            if (err) res.json(err.code);
-            if (!result==null){
-                console.log("Number of records inserted !: " + result.affectedRows);
+
+            try {
+                if (err) res.json(err.code);
+                if (!result==null){
+                    console.log("Number of records inserted !: " + result.affectedRows);
+                }
+                return res.json({state:'200'});
+            }catch (e) {
+                return res.json({ERROR : e.state});
             }
-            return res.json({state:'200'});
         });
 
 }
