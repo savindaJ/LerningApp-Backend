@@ -31,6 +31,7 @@ app.put('/updateuser',(req,res)=>{
 });
 
 app.delete('/deleteuser',(req,res)=>{
+    console.log("req",req.body.id)
     controller.deleteUser(req,res,(callback)=>{
         res.json({massage:"ok"})
     });

@@ -16,7 +16,6 @@ const updateUser = (req,res)=>{
 }
 
 const deleteUser = (req,res)=>{
-    console.log("delete !");
     modal.deleteUser(req,res);
 }
 
