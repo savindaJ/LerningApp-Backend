@@ -35,23 +35,14 @@ function insertUser(req,res){
 }
 
 function deleteUser(req,res){
-
     console.log(req.body);
-    return res.json({state:'200'});
-
-    /*if (req.body.id === undefined) {
-        console.log(req.body.id)
-        res.status(404).json({ ERROR : 'Not Found' });
-        return;
-    }
-
     const id = req.body.id;
     const insert = "DELETE FROM user WHERE user_id=?";
 
     connection.query(insert, id, function (err, result) {
         if (err) res.json(err.code);
-        return res.json({state:'200'});
-    });*/
+        return res.json({data:'ok'});
+    });
 }
 
 function getAllUser(req,res){

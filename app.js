@@ -30,12 +30,8 @@ app.put('/updateuser',(req,res)=>{
     });
 });
 
-app.delete('/deleteuser',(req,res)=>{
-    console.log("req",req.body)
-    res.json({massage:"ok"})
-    /*controller.deleteUser(req,res,(callback)=>{
-        res.json({massage:"ok"})
-    });*/
+app.put('/deleteuser',(req,res)=>{
+    controller.deleteUser(req,res);
 });
 
 module.exports = app;

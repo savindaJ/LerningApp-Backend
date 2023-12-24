@@ -11,14 +11,13 @@ const addUser = (req,res)=>{
 }
 
 const updateUser = (req,res)=>{
-    console.log("put !");
+    console.log("put !" , req.body);
     modal.updateUser(req,res);
+    // modal.deleteUser(req,res);
 }
 
 const deleteUser = (req,res)=>{
-    console.log("call controller body",req.body)
-    res.json({massage:"ok"})
-    // modal.deleteUser(req,res);
+    modal.deleteUser(req,res);
 }
 
 exports.getAllUser = getAllUser;
